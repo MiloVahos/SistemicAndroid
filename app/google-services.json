@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "761821678211",
+    "firebase_url": "https://sistemic-app.firebaseio.com",
+    "project_id": "sistemic-app",
+    "storage_bucket": "sistemic-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:761821678211:android:e823eb9c0c2c4750",
+        "android_client_info": {
+          "package_name": "com.evilgeniuses.sistemicpublications"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "761821678211-rvb7c7p3gnmoe427641cfvmf01s0mhls.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.evilgeniuses.sistemicpublications",
+            "certificate_hash": "0f550494e44b4e398a3d18135dddc8d9b1193bb5"
+          }
+        },
+        {
+          "client_id": "761821678211-umld5uhvbtctfruqc6pdvkhn0j2qf74l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA62M7AVdkceTa7s1iIGGLVQXSNbKVthE8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "761821678211-umld5uhvbtctfruqc6pdvkhn0j2qf74l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
