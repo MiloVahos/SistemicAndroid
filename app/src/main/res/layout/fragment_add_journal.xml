@@ -1,14 +1,283 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:scrollbars = "vertical"
+    android:scrollbarStyle="insideInset"
     tools:context=".AddJournalFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/AddJournal"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="10sp"
+            android:layout_marginStart="10sp"
+            android:padding="4sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginStart="9sp"
+            android:layout_marginEnd="9sp"
+            android:background="@color/colorPrimary"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:background="@drawable/input_outline_dark"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginTop="10sp"
+            android:padding="5sp"
+            android:hint="@string/Title"
+            android:textColorHint="@color/black"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp"
+            android:inputType="text"
+            android:id="@+id/ETitle"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:background="@drawable/input_outline_dark"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginTop="10sp"
+            android:padding="5sp"
+            android:hint="@string/Journal"
+            android:textColorHint="@color/black"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp"
+            android:inputType="text"
+            android:id="@+id/EJournal"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:background="@drawable/input_outline_dark"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginTop="10sp"
+            android:padding="5sp"
+            android:hint="@string/Number"
+            android:textColorHint="@color/black"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp"
+            android:inputType="text"
+            android:id="@+id/ENumber"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:background="@drawable/input_outline_dark"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginTop="10sp"
+            android:padding="5sp"
+            android:hint="@string/Volume"
+            android:textColorHint="@color/black"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp"
+            android:inputType="text"
+            android:id="@+id/EVolume"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:background="@drawable/input_outline_dark"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginTop="10sp"
+            android:padding="5sp"
+            android:hint="@string/Pages"
+            android:textColorHint="@color/black"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp"
+            android:inputType="text"
+            android:id="@+id/EPages"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:background="@drawable/input_outline_dark"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginTop="10sp"
+            android:padding="5sp"
+            android:hint="@string/Url"
+            android:textColorHint="@color/black"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp"
+            android:inputType="textUri"
+            android:id="@+id/EUrl"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginTop="10sp"
+            android:padding="5sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/CatColciencias"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp"/>
+
+            <Spinner
+                android:layout_width="100sp"
+                android:layout_height="40sp"
+                android:layout_marginStart="15sp"
+                android:layout_marginEnd="2sp"
+                android:padding="5sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp"
+                android:entries="@array/Colciencias"
+                android:id="@+id/SColciencia"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginTop="10sp"
+            android:padding="5sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/CatSjr"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp"/>
+
+            <Spinner
+                android:layout_width="100sp"
+                android:layout_height="40sp"
+                android:layout_marginStart="15sp"
+                android:layout_marginEnd="2sp"
+                android:padding="5sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp"
+                android:entries="@array/Sjr"
+                android:id="@+id/SSjr"/>
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:background="@drawable/input_outline_dark"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginTop="10sp"
+            android:padding="5sp"
+            android:hint="@string/Year"
+            android:textColorHint="@color/black"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp"
+            android:inputType="number"
+            android:id="@+id/EYear"/>
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:background="@drawable/input_outline_dark"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginTop="10sp"
+            android:padding="5sp"
+            android:hint="@string/Author"
+            android:textColorHint="@color/black"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp"
+            android:inputType="text"
+            android:id="@+id/EAuthor"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:hint="@string/ListaAutores"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="12sp"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="5sp"
+            android:id="@+id/TListaAutores"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginTop="10sp"
+            android:padding="5sp"
+            android:layout_gravity="center">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:layout_weight="1"
+                android:text="@string/ListAuthor"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:padding="4sp"
+                android:layout_marginEnd="5sp"
+                android:id="@+id/BAddAuthor"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:layout_weight="1"
+                android:text="@string/ClearList"
+                android:background="@color/colorPrimaryMid"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:padding="4sp"
+                android:layout_marginStart="5sp"
+                android:id="@+id/BClearList"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:text="@string/Save"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:padding="4sp"
+            android:layout_marginTop="10sp"
+            android:layout_marginStart="10sp"
+            android:layout_marginBottom="10sp"
+            android:id="@+id/BSave"/>
+
+        <ProgressBar
+            android:id="@+id/PBLoad"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:max="100"
+            android:visibility="gone"
+            android:backgroundTint="@color/white"
+            android:indeterminateTint="@color/colorPrimaryDark"
+            android:layout_marginTop="5sp"/>
+
+    </TableLayout>
+</ScrollView>

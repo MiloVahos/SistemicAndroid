@@ -1,8 +1,72 @@
 <resources>
-    <string name="app_name">SistemicPublications</string>
+    <string name="app_name">Sistemic Publications</string>
 
     <!--STRINGS PARA EL MENU-->
     <string name="Login">Iniciar Sesión</string>
+
+    <!--STRINGS PARA MAIN ACTIVITY-->
+    <string name="MainToolbarName">Publications</string>
+
+    <!--STRINGS PARA ADMINISTRATOR ACTIVITY-->
+    <string name="AdminToolbarName">Admin</string>
+    <string name="AddAuthor">Add new Author</string>
+    <string name="AddBook">Add new Book</string>
+    <string name="AddChapter">Add new Chapter</string>
+    <string name="AddJournal">Add new Journal</string>
+    <string name="AddConference">Add new Conference</string>
+    <string name="AddSoftware">Add new Software</string>
+    <string name="AddPrototype">Add new Prototype</string>
+    <string name="AddThesis">Add new Thesis</string>
+
+    <!--STRINGS DE LOS CAMPOS-->
+    <string name="Title">Title</string>
+    <string name="Journal">Journal Name</string>
+    <string name="Number">Journal Number ISSN</string>
+    <string name="Volume">Journal Volume</string>
+    <string name="Pages">Pages</string>
+    <string name="Url">URL or DOI</string>
+    <string name="CatColciencias">Colciencias Category</string>
+    <string name="CatSjr">SJR Category</string>
+    <string name="Year">Year</string>
+    <string name="Author">Author</string>
+    <string name="ListAuthor">Add author to list</string>
+    <string name="ListaAutores">Authors List: </string>
+    <string name="ClearList">Clear List</string>
+    <string name="Save">SAVE</string>
+
+    <!--ARRAY COLCIENCIAS-->
+    <string-array name="Colciencias">
+        <item>A1</item>
+        <item>A2</item>
+        <item>B</item>
+        <item>C</item>
+        <item>Without Category</item>
+    </string-array>
+
+    <string-array name="Sjr">
+        <item>Q1</item>
+        <item>Q2</item>
+        <item>Q3</item>
+        <item>Q4</item>
+        <item>Without Category</item>
+    </string-array>
+
+
+    <!-- STRINGS PARA INICIAR SESIÓN ACTIVITY-->
+    <string name="Email">Email</string>
+    <string name="Password">Password</string>
+    <string name="Iniciar">Log in</string>
+    <string name="CerrarSesion">Log out</string>
+
+    <!--STRINGS PARA TOASTS-->
+    <string name="CamposVacios">One or more fields are empty!</string>
+    <string name="Bienvenido">Welcome Administrator</string>
+    <string name="ConfirmarCS">Are you sure you want to log out?</string>
+    <string name="Problema">Something went wrong with the database!</string>
+    <string name="NoAuthor">Author field is empty</string>
+    <string name="YearProblema">Year should be higher than 1990 and lower or same than the actual year</string>
+    <string name="AuthorProblema">One or more authors are not register in the database</string>
+    <string name="SaveSuccess">Data is safe now :) !!!</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
