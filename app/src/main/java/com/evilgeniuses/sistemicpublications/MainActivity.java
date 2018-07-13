@@ -2,6 +2,11 @@ package com.evilgeniuses.sistemicpublications;
 
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -12,10 +17,15 @@ import android.view.View;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     //Declaración de Componentes del Layout
     private Toolbar                 MainToolbar;
+    private ViewPager               MainViewPager;
+    private TabLayout               MainTabLayout;
     private FloatingActionButton    FABAdd;
 
     private FirebaseAuth    mAuth;
@@ -28,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
 
         mAuth           =   FirebaseAuth.getInstance();
 
+        MainViewPager  =   findViewById(R.id.MainViewPager);
+        MainTabLayout  =   findViewById(R.id.MainTabLayout);
         MainToolbar     =   findViewById(R.id.MainToolbar);
         MainToolbar.setTitle("");
         FABAdd          =   findViewById(R.id.FABAdd);
@@ -36,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(MainToolbar);//Se cambia el Action bar por nuestra toolbar
         MainToolbar.setTitle(R.string.MainToolbarName);
         MainToolbar.setTitleTextColor(getResources().getColor(R.color.white));
+        //MANEJO DEL VIEWPAGER Y LOS TABS
+        setupViewPager(MainViewPager);//Se configura el ViewPager
+        MainTabLayout.setupWithViewPager(MainViewPager);
 
 
         FABAdd.setOnClickListener(new View.OnClickListener() {
@@ -77,5 +92,49 @@ public class MainActivity extends AppCompatActivity {
             FABAdd.setVisibility(View.GONE);
         }
     }
+
+    private void setupViewPager(ViewPager viewPager) {
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
+        adapter.addFrag(new BooksFragment(), "BOOK");
+        adapter.addFrag(new ChaptersFragment(), "CHAPTER");
+        adapter.addFrag(new JournalsFragment(), "JOURNAL");
+        adapter.addFrag(new ConferencesFragment(), "CONFERENCE");
+        adapter.addFrag(new SoftwareFragment(), "SOFTWARE");
+        adapter.addFrag(new PrototypesFragment(), "PROTOTYPE");
+        adapter.addFrag(new ThesisFragment(), "THESIS");
+        adapter.addFrag(new AuthorFragment(), "AUTHOR");
+        viewPager.setAdapter(adapter);
+        viewPager.setOffscreenPageLimit(7);
+    }
+
+    class ViewPagerAdapter extends FragmentPagerAdapter {
+        private final List<Fragment> mFragmentList = new ArrayList<>();
+        private final List<String> mFragmentTitleList = new ArrayList<>();
+
+        public ViewPagerAdapter(FragmentManager manager) {
+            super(manager);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            return mFragmentList.get(position);
+        }
+
+        @Override
+        public int getCount() {
+            return mFragmentList.size();
+        }
+
+        public void addFrag(Fragment fragment, String title) {
+            mFragmentList.add(fragment);
+            mFragmentTitleList.add(title);
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return mFragmentTitleList.get(position);
+        }
+    }
+
 
 }

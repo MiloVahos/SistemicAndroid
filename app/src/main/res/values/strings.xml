@@ -19,7 +19,7 @@
     <string name="AddThesis">Add new Thesis</string>
 
     <!--STRINGS DE LOS CAMPOS-->
-    <string name="Title">Title</string>
+    <string name="Title">Title:</string>
     <string name="Journal">Journal Name</string>
     <string name="Number">Journal Number ISSN</string>
     <string name="Volume">Journal Volume</string>
@@ -27,8 +27,8 @@
     <string name="Url">URL or DOI</string>
     <string name="CatColciencias">Colciencias Category</string>
     <string name="CatSjr">SJR Category</string>
-    <string name="Year">Year</string>
-    <string name="Author">Author</string>
+    <string name="Year">Year:</string>
+    <string name="Author">Author:</string>
     <string name="ListAuthor">Add author to list</string>
     <string name="ListaAutores">Authors List: </string>
     <string name="ClearList">Clear List</string>
@@ -67,6 +67,16 @@
     <string name="YearProblema">Year should be higher than 1990 and lower or same than the actual year</string>
     <string name="AuthorProblema">One or more authors are not register in the database</string>
     <string name="SaveSuccess">Data is safe now :) !!!</string>
+
+    <!--STRINGS DE LOS DOCUMENTOS-->
+    <string name="authors">Our Team</string>
+    <string name="books">Books</string>
+    <string name="Chapters">Book Chapters</string>
+    <string name="journals">Journal Articles</string>
+    <string name="conferences">Conferences Articles</string>
+    <string name="software">Software</string>
+    <string name="prototypes">Prototypes</string>
+    <string name="thesis">Thesis</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
